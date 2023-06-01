@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <title>BS_Task_3</title>
+</head>
+<!-- 
+<div class="col-sm-3 my-1">
+    <label class="sr-only" for="user">User</label>
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <div class="input-group-text">@</div>
+        </div>
+        <input type="text" class="form-control is-valid" id="user" placeholder="Username">
+    </div>
+</div> -->
+
+<body>
+    <form>
+        <fieldset style="background-color: rgb(206, 206, 196);">
+        <!-- fname -->
+        <div class="form-group row">
+            <label for="fname" class="col-sm-3 col-form-label"><b>First name</b></label>
+            <div class="col-sm-9">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text"><i class="fa fa-user" aria-hidden="true"></i></div>
+                    </div>
+                    <input type="text" class="form-control is-invalid " id="fname" placeholder="First Name">
+                    <div class="invalid-feedback">Enter first name</div>
+                </div>
+            </div>
+        </div>
+        <!-- lname -->
+        <div class="form-group row">
+            <label for="lname" class="col-sm-3 col-form-label"><b>Last Name</b></label>
+            <div class="col-sm-9">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text"><i class="fa fa-user" aria-hidden="true"></i></div>
+                    </div>
+                    <input type="text" class="form-control is-invalid" id="lname" placeholder="Last Name">
+                    <div class="invalid-feedback">Enter last name</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Email  -->
+        <div class="form-group row">
+            <label for="lname" class="col-sm-3 col-form-label"><b>E-mail</b></label>
+            <div class="col-sm-9">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+                    </div>
+                    <input type="email" class="form-control is-invalid" id="mail" placeholder="E-Mail Address">
+                    <div class="invalid-feedback">Enter valid email</div>
+                </div>
+            </div>
+        </div>
+        <!-- Phone -->
+        <div class="form-group row">
+            <label for="ph" class="col-sm-3 col-form-label"><b>Phone#</b></label>
+            <div class="col-sm-9">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                    </div>
+                    <input type="text" class="form-control is-invalid" id="ph" placeholder="(845)555-1212">
+                    <div class="invalid-feedback">Enter phone number</div>
+                </div>
+            </div>
+        </div>
+        <!-- address -->
+        <div class="form-group row">
+            <label for="addr" class="col-sm-3 col-form-label"><b>Address</b></label>
+            <div class="col-sm-9">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text"><i class="fa fa-home" aria-hidden="true"></i></div>
+                    </div>
+                    <input type="text" class="form-control is-invalid" id="addr" placeholder="Address">
+                    <div class="invalid-feedback">Enter address</div>
+                </div>
+            </div>
+        </div>
+        <!-- City -->
+        <div class="form-group row">
+            <label for="city" class="col-sm-3 col-form-label"><b>City</b></label>
+            <div class="col-sm-9">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text"><i class="fa fa-home" aria-hidden="true"></i></div>
+                    </div>
+                    <input type="text" class="form-control is-invalid" id="city" placeholder="city">
+                    <div class="invalid-feedback">Enter city name</div>
+                </div>
+            </div>
+          </div>
+
+        <!-- State -->
+        <div class="form-group row">
+            <label for="state" class="col-sm-3 col-form-label"><b>State</b></label>
+            <div class="col-sm-9">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text"><i class="fa fa-home" aria-hidden="true"></i></div>
+                    </div>
+                    <select class="form-control is-valid" id="state" placeholder="state">
+                        <option>Maharashtra</option>
+                        <option>Delhi</option>
+                        <option>Himachal</option>
+                        <option>Tamilnadu</option>
+                        <option>Kerala</option>
+                    </select>
+                </div>
+            </div>
+          </div>
+
+        <!-- Hosting radio -->
+        <div class="form-group row">
+            <label for="hosting" class="col-sm-3 col-form-label"><b>Do you have hosting ?</b></label>
+            <div class="col-sm-8">
+                <div class="input-group">
+                    <div class="form-check">
+                        <input class="form-check-input position-static" type="radio" name="hosting" id="hosting" value="y" aria-label="..."><label>Yes</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3"></div><!--empty idv -->
+            <div class="col-sm-8">
+                <div class="input-group">
+                    <div class="form-check">
+                        <input class="form-check-input position-static" type="radio" name="hosting" id="hosting" value="n" aria-label="..."><label>No</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Desc -->
+        <div class="form-group row">
+            <label for="desc" class="col-sm-3 col-form-label"><b>Project Description</b></label>
+            <div class="col-sm-9">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text"><i class="fa fa-pencil" aria-hidden="true"></i></div>
+                    </div>
+                    <textarea placeholder="Project Description" rows="3" cols="50" name="desc" id="desc"></textarea>    
+                </div>
+            </div>
+          </div>
+
+
+        <div class="form-group row">
+            <div class="col-sm-9">
+                <div style="text-align:center;">
+                    <button type="submit" class="btn btn-warning"><i class="fa fa-paper-plane" aria-hidden="true"></i> Send</button>
+                </div>
+                
+            </div>
+        </div>
+    </fieldset>
+    </form>
+</body>
+
+</html>

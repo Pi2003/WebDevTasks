@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JS_Task_1</title>
+    <script>
+        function showDate(){
+            let months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+            let d= new Date();
+            let date="";
+            date=date+d.getDay();
+            date=date+"/";
+            date=date+months[d.getMonth()];
+            date=date+"/";
+            date=date+d.getFullYear();
+            document.getElementById('date').innerHTML=date;
+        }
+        function showTime(){
+            document.getElementById('time').innerHTML=Date();
+        }
+    </script>
+</head>
+<body>
+    <button onclick="showDate()">Show date</button>
+    <p id="date"></p>
+    <button onclick="showTime()">Show time</button>
+    <p id="time"></p>
+</body>
+</html>

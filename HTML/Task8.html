@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HTML_Task_6</title>
+</head>
+<style>
+    table{
+        border-style:ridge;
+    }
+    tr,td{
+        border-style: ridge;
+    }
+</style>
+<body>
+    <form method="get" action="#">
+        <table cellpadding="5px">
+            <tr>   
+                <td style="width: 100px; border: 1p;"><label style="font-weight: bold;">First Name: </label></td>
+                <td style="width:400px;"><input type="text"></td>
+            </tr>
+            <tr>
+                <td><lablel style="font-weight: bold;">Last Name: </lablel></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td><lablel style="font-weight: bold;">Email: </lablel></td>
+                <td><input type="email"></td>
+            </tr>
+            <tr>
+                <td rowspan="2"><lablel style="font-weight: bold;">Gender: </lablel></td>
+                <td><input type="radio" id="M"><label style="font-weight: bold;">Male</label>
+            </tr>
+            <tr>
+                <td><input type="radio" id="F"><label style="font-weight: bold;">Female</label></td>
+            </tr>
+            <tr>
+                <td><label style="font-weight: bold;">Age: </label></td>
+                <td> <input type="number"></td>
+            </tr>
+            <tr>
+                <td><lablel style="font-weight: bold;">Phone number: </lablel></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td><label style="font-weight: bold;">Address:</label></td>
+                <td><textarea id="addr" rows="3"></textarea></td>
+            </tr>
+            <tr>
+                <td><label style="font-weight: bold;">State: </label></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td><label style="font-weight: bold;">Country: </label></td>
+                <td><select name="country" id="country">
+                <option value="India">India</option>
+                <option value="USA">USA</option>
+                <option value="China">China</option>
+                <option value="Japan">Japan</option>
+                <option value="Germany">Germany</option>
+                <option value="Russia">Russia</option>
+            </select></td>
+            </tr>
+            <tr>
+                <td> <label style="font-weight: bold;">Languages known: </label></td>
+                <td><input type="checkbox" id="en" value="en"><label style="font-weight: bold;">English</label><input type="checkbox" id="kn" value="kn"><label style="font-weight: bold;">Kannada</label>
+            <input type="checkbox" id="hi" value="hi"><label style="font-weight: bold;">Hindi</label>
+            <input type="checkbox" id="te" value="te"><label style="font-weight: bold;">Telugu</label></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="checkbox" id="agree" value="agree"><label>Here by I declare all the given details are true</label><br></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: right;"><p> Log in to <a href="https://ethnus.com">Ethnus</a> website</p></td>
+            </tr>
+            
+        </table>
+        <button type="submit">Register</button>
+    </form>     
+</body>
+</html>

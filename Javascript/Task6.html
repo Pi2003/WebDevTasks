@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JS_Task_6</title>
+</head>
+<script>
+    function sortAlpha(){
+        var x=document.getElementById('str').value;
+        var y=[]
+        for(let i=0;i<x.length;i++){
+            y[i]=x.charAt(i);
+        }
+        y=y.sort();
+        y=y.join("");
+        alert(y);
+    }
+</script>
+<body>
+    <form>
+        <input type="text" id="str">
+        <button type="button" onclick="sortAlpha()">Submit</submit>
+    </form>
+</body>
+</html>

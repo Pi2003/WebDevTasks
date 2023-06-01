@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS_Task_4</title>
+</head>
+<style>
+    ul {
+    border:solid black;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: aqua;
+    }
+
+li a {
+  display: block;
+  color: blue;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a.active {
+  background-color: orange;
+  color: white;
+}
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+</style>
+<body>
+    <ul>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#java">Java</a></li>
+        <li><a href="#css">CSS</a></li>
+        <li><a href="#html">HTML</a></li>
+        <li><a href="#bs">Bootstrap</a></li>
+    </ul>
+</body>
+</html>

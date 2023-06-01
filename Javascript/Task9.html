@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>JS_Task_9</title>
+</head>
+<script>
+    function validate() {
+        var name = document.getElementById('name').value
+        var password = document.getElementById('pass').value
+        var ph = document.getElementById('ph').value
+        var mail = document.getElementById('email').value;
+        var gender = document.getElementById('gender');
+        var lang = document.getElementById('lang');
+        var zip = document.getElementById('zip').value;
+        const reURL = /^(http(s):\/\/.)[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)$/;
+        const reMail = /^\S+@\S+\.\S+$/;
+        if (name == "" || password == "" || ph == "" || mail == "" ||
+            !gender.checked || lang == "" || zip == "") {
+            alert("All fields required");
+        }
+        else {
+            // Minimum eight characters, at least one upper case English letter, one lower case English letter, one number and one special character
+            const regPass = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+            if (!password.match(regPass)) {
+                alert("Containing minimum 8 characters, with at least 1 letter and 1 number");
+            }
+            else if (mail == "" || !mail.match(reMail)) {
+                alert("enter valid mail id");
+            }
+            else {
+                alert("All good..")
+            }
+
+        }
+
+    }
+</script>
+
+<body>
+    <div style="background-color: brown;">
+        <form style="text-align: center;padding: 50px;">
+            <label>Name: </label>
+            <input type="text" id="name"><br><br>
+            <label>Email: </label>
+            <input type="email" id="email"><br><br>
+            <label>Password: </label>
+            <input type="password" id="pass"><br><br>
+            <label>Phone: </label>
+            <input type="text" id="ph"><br><br>
+            <label>Gender: </label>
+            <input type="radio" name="gender" id="gender" value="m"><label>Male</label>
+            <input type="radio" name="gender" id="gender" value="f"><label>Female</label>
+            <input type="radio" name="gender" id="gender" value="o"><label>Other</label><br><br>
+            <label>language: </label>
+            <select id="lang">
+                <option>Telugu</option>
+                <option>Tamil</option>
+                <option>Hindi</option>
+                <option>English</option>
+                <option>Marathi</option>
+            </select><br><br>
+            <label>ZIP code: </label>
+            <input type="text" id="zip"><br><br>
+            <label>About: </label>
+            <textarea id="name" row="2" cols="40"></textarea><br><br>
+            <button type="button" onclick="validate()">Register</button>
+        </form>
+    </div>
+</body>
+
+</html>

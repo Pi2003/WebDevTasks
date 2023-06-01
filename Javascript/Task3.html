@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <title>JS_Task_3</title>
+</head>
+<script>
+    function validate(){
+       var name=document.getElementById('name').value;
+       var mail=document.getElementById('mail').value;
+       var url=document.getElementById('url').value;
+       var msg=document.getElementById('msg').value;
+       const reURL=/^(http(s):\/\/.)[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)$/;
+       const reMail=/^\S+@\S+\.\S+$/;
+            
+       if(name == ""){
+        document.getElementById('l1').innerHTML="This field is required";
+        document.getElementById('name').style.border="red solid thin";
+        document.getElementById('l1').style.color="red";
+        }
+        if(mail =="" || !mail.match(reMail)){
+            document.getElementById('l2').innerHTML="Enter valid mail";
+            document.getElementById('mail').style.border="red solid thin";
+            document.getElementById('l2').style.color="red";
+        }
+        if(url =="" || !url.match(reURL)){
+            document.getElementById('l3').innerHTML="Enter valid url";
+            document.getElementById('url').style.border="red solid thin";
+            document.getElementById('l3').style.color="red";
+        }
+        if(msg ==""){
+            document.getElementById('l4').innerHTML="This field is required";
+            document.getElementById('msg').style.border="red solid thin";
+            document.getElementById('l4').style.color="red";
+        }
+        else{
+            alert("All Good ...");
+        }
+    }
+</script>
+<body>    
+    <form name="form1" style="margin-top: 100px;margin-left:100px">
+        <label for="name">Name: </label>
+        <input type="text" id="name">
+        <label id="l1"></label>
+        <br>
+        <label for="mail">Email: </label>
+        <input type="email" id="mail">
+        <label id="l2"></label>
+        <br>
+        <label for="url">Website: </label>
+        <input type="text" id="url">
+        <label id="l3"></label>
+        <br>
+        <label for="msg">Message: </label>
+        <input  type="text" id="msg">
+        <label id="l4"></label>
+        <br>
+        <button type="button" id="submit" onclick="validate()">Submit</button>
+    </form>
+</body>
+</html>
